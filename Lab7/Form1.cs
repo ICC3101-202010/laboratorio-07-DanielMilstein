@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 
 namespace Lab7
 {
     public partial class Calculadora : Form
     {
+        public Class1 class1;
         public Calculadora()
         {
             InitializeComponent();

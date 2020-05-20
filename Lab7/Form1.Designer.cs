@@ -47,13 +47,16 @@
             this.n0 = new System.Windows.Forms.Button();
             this.n8 = new System.Windows.Forms.Button();
             this.n7 = new System.Windows.Forms.Button();
-            this.display = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelCalc = new System.Windows.Forms.Panel();
+            this.history = new System.Windows.Forms.Button();
+            this.panelCalc.SuspendLayout();
             this.SuspendLayout();
             // 
             // AC
             // 
             this.AC.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AC.Location = new System.Drawing.Point(452, 246);
+            this.AC.Location = new System.Drawing.Point(329, 120);
             this.AC.Name = "AC";
             this.AC.Size = new System.Drawing.Size(76, 70);
             this.AC.TabIndex = 0;
@@ -63,7 +66,7 @@
             // del
             // 
             this.del.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.del.Location = new System.Drawing.Point(534, 248);
+            this.del.Location = new System.Drawing.Point(411, 122);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(76, 70);
             this.del.TabIndex = 1;
@@ -73,7 +76,7 @@
             // Div
             // 
             this.Div.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Div.Location = new System.Drawing.Point(452, 322);
+            this.Div.Location = new System.Drawing.Point(329, 196);
             this.Div.Name = "Div";
             this.Div.Size = new System.Drawing.Size(76, 70);
             this.Div.TabIndex = 2;
@@ -83,7 +86,7 @@
             // mult
             // 
             this.mult.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mult.Location = new System.Drawing.Point(534, 324);
+            this.mult.Location = new System.Drawing.Point(411, 198);
             this.mult.Name = "mult";
             this.mult.Size = new System.Drawing.Size(76, 70);
             this.mult.TabIndex = 3;
@@ -93,7 +96,7 @@
             // sum
             // 
             this.sum.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sum.Location = new System.Drawing.Point(452, 398);
+            this.sum.Location = new System.Drawing.Point(329, 272);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(76, 70);
             this.sum.TabIndex = 4;
@@ -103,7 +106,7 @@
             // subs
             // 
             this.subs.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subs.Location = new System.Drawing.Point(534, 400);
+            this.subs.Location = new System.Drawing.Point(411, 274);
             this.subs.Name = "subs";
             this.subs.Size = new System.Drawing.Size(76, 70);
             this.subs.TabIndex = 5;
@@ -112,8 +115,8 @@
             // 
             // ans
             // 
-            this.ans.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ans.Location = new System.Drawing.Point(452, 474);
+            this.ans.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ans.Location = new System.Drawing.Point(329, 348);
             this.ans.Name = "ans";
             this.ans.Size = new System.Drawing.Size(76, 70);
             this.ans.TabIndex = 6;
@@ -123,7 +126,7 @@
             // equal
             // 
             this.equal.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equal.Location = new System.Drawing.Point(534, 476);
+            this.equal.Location = new System.Drawing.Point(411, 350);
             this.equal.Name = "equal";
             this.equal.Size = new System.Drawing.Size(76, 70);
             this.equal.TabIndex = 7;
@@ -133,7 +136,7 @@
             // n6
             // 
             this.n6.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n6.Location = new System.Drawing.Point(346, 322);
+            this.n6.Location = new System.Drawing.Point(223, 196);
             this.n6.Name = "n6";
             this.n6.Size = new System.Drawing.Size(76, 70);
             this.n6.TabIndex = 11;
@@ -143,7 +146,7 @@
             // n5
             // 
             this.n5.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n5.Location = new System.Drawing.Point(246, 322);
+            this.n5.Location = new System.Drawing.Point(123, 196);
             this.n5.Name = "n5";
             this.n5.Size = new System.Drawing.Size(76, 70);
             this.n5.TabIndex = 10;
@@ -153,7 +156,7 @@
             // n3
             // 
             this.n3.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n3.Location = new System.Drawing.Point(346, 398);
+            this.n3.Location = new System.Drawing.Point(223, 272);
             this.n3.Name = "n3";
             this.n3.Size = new System.Drawing.Size(76, 70);
             this.n3.TabIndex = 9;
@@ -163,7 +166,7 @@
             // n2
             // 
             this.n2.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n2.Location = new System.Drawing.Point(248, 398);
+            this.n2.Location = new System.Drawing.Point(125, 272);
             this.n2.Name = "n2";
             this.n2.Size = new System.Drawing.Size(76, 70);
             this.n2.TabIndex = 8;
@@ -173,7 +176,7 @@
             // n4
             // 
             this.n4.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n4.Location = new System.Drawing.Point(148, 322);
+            this.n4.Location = new System.Drawing.Point(25, 196);
             this.n4.Name = "n4";
             this.n4.Size = new System.Drawing.Size(76, 70);
             this.n4.TabIndex = 15;
@@ -183,7 +186,7 @@
             // comma
             // 
             this.comma.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comma.Location = new System.Drawing.Point(346, 474);
+            this.comma.Location = new System.Drawing.Point(223, 348);
             this.comma.Name = "comma";
             this.comma.Size = new System.Drawing.Size(76, 70);
             this.comma.TabIndex = 14;
@@ -193,7 +196,7 @@
             // n1
             // 
             this.n1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n1.Location = new System.Drawing.Point(148, 398);
+            this.n1.Location = new System.Drawing.Point(25, 272);
             this.n1.Name = "n1";
             this.n1.Size = new System.Drawing.Size(76, 70);
             this.n1.TabIndex = 13;
@@ -203,7 +206,7 @@
             // n9
             // 
             this.n9.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n9.Location = new System.Drawing.Point(346, 246);
+            this.n9.Location = new System.Drawing.Point(223, 120);
             this.n9.Name = "n9";
             this.n9.Size = new System.Drawing.Size(76, 70);
             this.n9.TabIndex = 12;
@@ -213,7 +216,7 @@
             // n0
             // 
             this.n0.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n0.Location = new System.Drawing.Point(248, 474);
+            this.n0.Location = new System.Drawing.Point(125, 348);
             this.n0.Name = "n0";
             this.n0.Size = new System.Drawing.Size(76, 70);
             this.n0.TabIndex = 19;
@@ -223,7 +226,7 @@
             // n8
             // 
             this.n8.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n8.Location = new System.Drawing.Point(248, 246);
+            this.n8.Location = new System.Drawing.Point(125, 120);
             this.n8.Name = "n8";
             this.n8.Size = new System.Drawing.Size(76, 70);
             this.n8.TabIndex = 17;
@@ -233,50 +236,71 @@
             // n7
             // 
             this.n7.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n7.Location = new System.Drawing.Point(148, 246);
+            this.n7.Location = new System.Drawing.Point(25, 120);
             this.n7.Name = "n7";
             this.n7.Size = new System.Drawing.Size(76, 70);
             this.n7.TabIndex = 16;
             this.n7.Text = "7";
             this.n7.UseVisualStyleBackColor = true;
             // 
-            // display
+            // textBox1
             // 
-            this.display.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.display.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.display.Location = new System.Drawing.Point(144, 120);
-            this.display.Name = "display";
-            this.display.Size = new System.Drawing.Size(466, 108);
-            this.display.TabIndex = 20;
+            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(25, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(462, 74);
+            this.textBox1.TabIndex = 21;
+            // 
+            // panelCalc
+            // 
+            this.panelCalc.Controls.Add(this.history);
+            this.panelCalc.Controls.Add(this.textBox1);
+            this.panelCalc.Controls.Add(this.n0);
+            this.panelCalc.Controls.Add(this.n8);
+            this.panelCalc.Controls.Add(this.n7);
+            this.panelCalc.Controls.Add(this.n4);
+            this.panelCalc.Controls.Add(this.comma);
+            this.panelCalc.Controls.Add(this.n1);
+            this.panelCalc.Controls.Add(this.n9);
+            this.panelCalc.Controls.Add(this.n6);
+            this.panelCalc.Controls.Add(this.n5);
+            this.panelCalc.Controls.Add(this.n3);
+            this.panelCalc.Controls.Add(this.n2);
+            this.panelCalc.Controls.Add(this.equal);
+            this.panelCalc.Controls.Add(this.ans);
+            this.panelCalc.Controls.Add(this.subs);
+            this.panelCalc.Controls.Add(this.sum);
+            this.panelCalc.Controls.Add(this.mult);
+            this.panelCalc.Controls.Add(this.Div);
+            this.panelCalc.Controls.Add(this.del);
+            this.panelCalc.Controls.Add(this.AC);
+            this.panelCalc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCalc.Location = new System.Drawing.Point(0, 0);
+            this.panelCalc.Name = "panelCalc";
+            this.panelCalc.Size = new System.Drawing.Size(508, 440);
+            this.panelCalc.TabIndex = 22;
+            // 
+            // history
+            // 
+            this.history.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.history.Location = new System.Drawing.Point(25, 348);
+            this.history.Name = "history";
+            this.history.Size = new System.Drawing.Size(76, 70);
+            this.history.TabIndex = 22;
+            this.history.Text = "History";
+            this.history.UseVisualStyleBackColor = true;
             // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(798, 870);
-            this.Controls.Add(this.display);
-            this.Controls.Add(this.n0);
-            this.Controls.Add(this.n8);
-            this.Controls.Add(this.n7);
-            this.Controls.Add(this.n4);
-            this.Controls.Add(this.comma);
-            this.Controls.Add(this.n1);
-            this.Controls.Add(this.n9);
-            this.Controls.Add(this.n6);
-            this.Controls.Add(this.n5);
-            this.Controls.Add(this.n3);
-            this.Controls.Add(this.n2);
-            this.Controls.Add(this.equal);
-            this.Controls.Add(this.ans);
-            this.Controls.Add(this.subs);
-            this.Controls.Add(this.sum);
-            this.Controls.Add(this.mult);
-            this.Controls.Add(this.Div);
-            this.Controls.Add(this.del);
-            this.Controls.Add(this.AC);
+            this.ClientSize = new System.Drawing.Size(508, 440);
+            this.Controls.Add(this.panelCalc);
             this.Name = "Calculadora";
             this.Text = "Calculadora";
+            this.panelCalc.ResumeLayout(false);
+            this.panelCalc.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -302,7 +326,9 @@
         private System.Windows.Forms.Button n0;
         private System.Windows.Forms.Button n8;
         private System.Windows.Forms.Button n7;
-        private System.Windows.Forms.Label display;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panelCalc;
+        private System.Windows.Forms.Button history;
     }
 }
 

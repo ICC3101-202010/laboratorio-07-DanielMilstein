@@ -1,0 +1,10 @@
+Z:\laboratorio-07-DanielMilstein\Lab7\bin\Debug\Lab7.exe.config
+Z:\laboratorio-07-DanielMilstein\Lab7\bin\Debug\Lab7.exe
+Z:\laboratorio-07-DanielMilstein\Lab7\bin\Debug\Lab7.pdb
+Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.csprojAssemblyReference.cache
+Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.Calculadora.resources
+Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
+Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.exe
+Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.pdb
