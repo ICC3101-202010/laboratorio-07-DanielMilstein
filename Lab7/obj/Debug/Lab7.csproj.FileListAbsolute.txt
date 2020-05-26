@@ -8,3 +8,6 @@ Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cac
 Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
 Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.exe
 Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.pdb
+Z:\laboratorio-07-DanielMilstein\Lab7\bin\Debug\ClassLibrary.dll
+Z:\laboratorio-07-DanielMilstein\Lab7\bin\Debug\ClassLibrary.pdb
+Z:\laboratorio-07-DanielMilstein\Lab7\obj\Debug\Lab7.csproj.CopyComplete

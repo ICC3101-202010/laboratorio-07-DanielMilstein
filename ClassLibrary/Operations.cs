@@ -8,12 +8,10 @@ namespace ClassLibrary
 {
     public class Operations
     {
-        private float Num1;
-        private float Num2;
-        
+     
 
 
-        public float Op(string kind)
+        public double Op(double Num1, double Num2, string kind)
         {
             if (kind == "+")
             {

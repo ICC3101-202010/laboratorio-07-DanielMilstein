@@ -49,6 +49,7 @@
             this.n7 = new System.Windows.Forms.Button();
             this.box = new System.Windows.Forms.TextBox();
             this.panelCalc = new System.Windows.Forms.Panel();
+            this.pre = new System.Windows.Forms.Label();
             this.history = new System.Windows.Forms.Button();
             this.panelCalc.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +88,7 @@
             this.Div.TabIndex = 2;
             this.Div.Text = "/";
             this.Div.UseVisualStyleBackColor = true;
+            this.Div.Click += new System.EventHandler(this.op_Click);
             // 
             // mult
             // 
@@ -98,6 +100,7 @@
             this.mult.TabIndex = 3;
             this.mult.Text = "*";
             this.mult.UseVisualStyleBackColor = true;
+            this.mult.Click += new System.EventHandler(this.op_Click);
             // 
             // sum
             // 
@@ -109,6 +112,7 @@
             this.sum.TabIndex = 4;
             this.sum.Text = "+";
             this.sum.UseVisualStyleBackColor = true;
+            this.sum.Click += new System.EventHandler(this.op_Click);
             // 
             // subs
             // 
@@ -120,6 +124,7 @@
             this.subs.TabIndex = 5;
             this.subs.Text = "-";
             this.subs.UseVisualStyleBackColor = true;
+            this.subs.Click += new System.EventHandler(this.op_Click);
             // 
             // ans
             // 
@@ -131,6 +136,7 @@
             this.ans.TabIndex = 6;
             this.ans.Text = "ANS";
             this.ans.UseVisualStyleBackColor = true;
+            this.ans.Click += new System.EventHandler(this.ans_Click);
             // 
             // equal
             // 
@@ -142,6 +148,7 @@
             this.equal.TabIndex = 7;
             this.equal.Text = "=";
             this.equal.UseVisualStyleBackColor = true;
+            this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
             // n6
             // 
@@ -211,8 +218,9 @@
             this.comma.Name = "comma";
             this.comma.Size = new System.Drawing.Size(102, 70);
             this.comma.TabIndex = 14;
-            this.comma.Text = ",";
+            this.comma.Text = ".";
             this.comma.UseVisualStyleBackColor = true;
+            this.comma.Click += new System.EventHandler(this.n_Click);
             // 
             // n1
             // 
@@ -288,6 +296,7 @@
             // 
             // panelCalc
             // 
+            this.panelCalc.Controls.Add(this.pre);
             this.panelCalc.Controls.Add(this.history);
             this.panelCalc.Controls.Add(this.box);
             this.panelCalc.Controls.Add(this.n0);
@@ -314,6 +323,18 @@
             this.panelCalc.Name = "panelCalc";
             this.panelCalc.Size = new System.Drawing.Size(556, 396);
             this.panelCalc.TabIndex = 22;
+            // 
+            // pre
+            // 
+            this.pre.AllowDrop = true;
+            this.pre.AutoSize = true;
+            this.pre.BackColor = System.Drawing.SystemColors.Window;
+            this.pre.Font = new System.Drawing.Font("Comic Sans MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pre.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.pre.Location = new System.Drawing.Point(15, 5);
+            this.pre.Name = "pre";
+            this.pre.Size = new System.Drawing.Size(0, 61);
+            this.pre.TabIndex = 23;
             // 
             // history
             // 
@@ -369,6 +390,7 @@
         private System.Windows.Forms.TextBox box;
         private System.Windows.Forms.Panel panelCalc;
         private System.Windows.Forms.Button history;
+        private System.Windows.Forms.Label pre;
     }
 }
 
