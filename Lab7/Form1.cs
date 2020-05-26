@@ -20,6 +20,7 @@ namespace Lab7
         private string Op;
         private double Result;
         private bool OpDone = false;
+        private List<String> History = new List<string>();
 
         public Calculadora()
         {
@@ -54,7 +55,15 @@ namespace Lab7
 
         private void del_Click(object sender, EventArgs e)
         {
-            box.Text = box.Text.Substring(0, box.Text.Length - 1);
+            try
+            {
+                box.Text = box.Text.Substring(0, box.Text.Length - 1);
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
 
         private void op_Click(object sender, EventArgs e)
@@ -84,30 +93,23 @@ namespace Lab7
             {
                 box.Text = "Math error";
             }
-            pre.Text += box.Text;
+            
             if (Op == "/" && Num2 == 0)
             {
                 box.Text = "Math error";
             }
             else
             {
+                pre.Text += box.Text;
                 Result = operations.Op(Num1, Num2, Op);
                 box.Text = $"{Result}";
                 pre.Text = $"{Num1} {Op} {Num2}";
+                History.Add($"{Num1} {Op} {Num2} = {Result}");
                 Num2 = Result;
                 OpDone = true;
             }
             
-            /*
-            if (Op == "+")
-            {
-                operations.Op(Num1, Num2, Op);
-            }
-
-            else if (Op == "-")
-            {
-                operations.Op(Num1, Num2, Op);
-            }*/
+            
         }
 
         private void ans_Click(object sender, EventArgs e)
@@ -120,6 +122,39 @@ namespace Lab7
             {
 
             }
+        }
+
+        private void history_Click(object sender, EventArgs e)
+        {
+            panelHist.Visible = true;
+            panelCalc.Visible = false;
+            HistoryList.Update();
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            History.Clear();
+            HistoryList.Items.Clear();
+            HistoryList.Update();
+            
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            panelHist.Visible = false;
+            panelCalc.Visible = true;
+        }
+
+        private void HistoryList_VisibleChanged(object sender, EventArgs e)
+        {
+            ListView lv = (ListView)sender;
+            ListViewItem item = lv.Items[0];
+            foreach (string eq in History)
+            {
+                item.SubItems.Add(eq);
+
+            }
+            HistoryList.Update();
         }
     }
 }

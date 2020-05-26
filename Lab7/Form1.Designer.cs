@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.AC = new System.Windows.Forms.Button();
             this.del = new System.Windows.Forms.Button();
             this.Div = new System.Windows.Forms.Button();
@@ -51,7 +53,12 @@
             this.panelCalc = new System.Windows.Forms.Panel();
             this.pre = new System.Windows.Forms.Label();
             this.history = new System.Windows.Forms.Button();
+            this.panelHist = new System.Windows.Forms.Panel();
+            this.HistoryList = new System.Windows.Forms.ListView();
+            this.clear = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.panelCalc.SuspendLayout();
+            this.panelHist.SuspendLayout();
             this.SuspendLayout();
             // 
             // AC
@@ -326,7 +333,6 @@
             // 
             // pre
             // 
-            this.pre.AllowDrop = true;
             this.pre.AutoSize = true;
             this.pre.BackColor = System.Drawing.SystemColors.Window;
             this.pre.Font = new System.Drawing.Font("Comic Sans MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,6 +352,54 @@
             this.history.TabIndex = 22;
             this.history.Text = "History";
             this.history.UseVisualStyleBackColor = true;
+            this.history.Click += new System.EventHandler(this.history_Click);
+            // 
+            // panelHist
+            // 
+            this.panelHist.Controls.Add(this.back);
+            this.panelHist.Controls.Add(this.clear);
+            this.panelHist.Controls.Add(this.HistoryList);
+            this.panelHist.Location = new System.Drawing.Point(12, 12);
+            this.panelHist.Name = "panelHist";
+            this.panelHist.Size = new System.Drawing.Size(556, 395);
+            this.panelHist.TabIndex = 23;
+            this.panelHist.Visible = false;
+            // 
+            // HistoryList
+            // 
+            this.HistoryList.GridLines = true;
+            this.HistoryList.HideSelection = false;
+            this.HistoryList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.HistoryList.Location = new System.Drawing.Point(16, 14);
+            this.HistoryList.Name = "HistoryList";
+            this.HistoryList.Size = new System.Drawing.Size(530, 293);
+            this.HistoryList.TabIndex = 0;
+            this.HistoryList.UseCompatibleStateImageBehavior = false;
+            this.HistoryList.View = System.Windows.Forms.View.Details;
+            this.HistoryList.VisibleChanged += new System.EventHandler(this.HistoryList_VisibleChanged);
+            // 
+            // clear
+            // 
+            this.clear.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear.Location = new System.Drawing.Point(256, 326);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(290, 54);
+            this.clear.TabIndex = 1;
+            this.clear.Text = "Clear History";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
+            // 
+            // back
+            // 
+            this.back.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.Location = new System.Drawing.Point(26, 326);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(150, 55);
+            this.back.TabIndex = 2;
+            this.back.Text = "Back";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // Calculadora
             // 
@@ -353,8 +407,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(576, 422);
+            this.ClientSize = new System.Drawing.Size(582, 418);
             this.Controls.Add(this.panelCalc);
+            this.Controls.Add(this.panelHist);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Calculadora";
@@ -362,6 +417,7 @@
             this.Text = "Calculadora";
             this.panelCalc.ResumeLayout(false);
             this.panelCalc.PerformLayout();
+            this.panelHist.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -391,6 +447,10 @@
         private System.Windows.Forms.Panel panelCalc;
         private System.Windows.Forms.Button history;
         private System.Windows.Forms.Label pre;
+        private System.Windows.Forms.Panel panelHist;
+        private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.ListView HistoryList;
     }
 }
 
