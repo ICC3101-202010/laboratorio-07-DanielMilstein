@@ -1,0 +1,6 @@
+Z:\laboratorio-07-DanielMilstein\ClassLibrary\bin\Debug\ClassLibrary.dll
+Z:\laboratorio-07-DanielMilstein\ClassLibrary\bin\Debug\ClassLibrary.pdb
+Z:\laboratorio-07-DanielMilstein\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+Z:\laboratorio-07-DanielMilstein\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+Z:\laboratorio-07-DanielMilstein\ClassLibrary\obj\Debug\ClassLibrary.dll
+Z:\laboratorio-07-DanielMilstein\ClassLibrary\obj\Debug\ClassLibrary.pdb
