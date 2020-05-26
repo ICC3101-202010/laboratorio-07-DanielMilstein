@@ -128,14 +128,16 @@ namespace Lab7
         {
             panelHist.Visible = true;
             panelCalc.Visible = false;
-            HistoryList.Update();
+            AddList();
+            
+            
         }
 
         private void clear_Click(object sender, EventArgs e)
         {
             History.Clear();
-            HistoryList.Items.Clear();
-            HistoryList.Update();
+            HistoryList.Text = "";
+            
             
         }
 
@@ -145,16 +147,24 @@ namespace Lab7
             panelCalc.Visible = true;
         }
 
-        private void HistoryList_VisibleChanged(object sender, EventArgs e)
+        private void AddList()
         {
-            ListView lv = (ListView)sender;
-            ListViewItem item = lv.Items[0];
             foreach (string eq in History)
             {
-                item.SubItems.Add(eq);
-
+                if (History.IndexOf(eq) == 0)
+                {
+                    HistoryList.Text = eq;
+                    HistoryList.Text += Environment.NewLine;
+                }
+                else
+                {
+                    
+                    HistoryList.Text += eq;
+                    HistoryList.Text += Environment.NewLine;
+                }
+                
             }
-            HistoryList.Update();
         }
+        
     }
 }
